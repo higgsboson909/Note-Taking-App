@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+.css-13cymwt-control {
+    border-color:oklch(70.7% 0.022 261.325) !important;
+}
+
+html {
+    background-color: var(--color-gray-50);
+}
