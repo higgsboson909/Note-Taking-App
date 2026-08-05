@@ -25,9 +25,40 @@ export type Tag = {
   id: string;
   label: string;
 };
+
+const initialTags: Tag[] = [
+  { id: "tag-focus", label: "Focus" },
+  { id: "tag-work", label: "Work" },
+  { id: "tag-personal", label: "Personal" },
+];
+
+const initialNotes: RawNote[] = [
+  {
+    id: "note-weekly-planning",
+    title: "Weekly planning",
+    markdown:
+      "## Priority list\n\n- Ship the notes app\n- Clean up the tag editor\n- Review the readme\n",
+    tagIds: ["tag-work", "tag-focus"],
+  },
+  {
+    id: "note-grocery-list",
+    title: "Grocery list",
+    markdown:
+      "- Oat milk\n- Coffee\n- Tomatoes\n- Pasta\n\nRemember to use the market on the way home.",
+    tagIds: ["tag-personal"],
+  },
+  {
+    id: "note-ideas",
+    title: "Feature ideas",
+    markdown:
+      "- Nested tags\n- Search by markdown\n- Archive notes instead of deleting them",
+    tagIds: ["tag-work"],
+  },
+];
+
 const App = () => {
-  const [notes, setNotes] = useLocalStorage<RawNote[]>("NOTES", []);
-  const [tags, setTags] = useLocalStorage<Tag[]>("TAGS", []);
+  const [notes, setNotes] = useLocalStorage<RawNote[]>("NOTES", initialNotes);
+  const [tags, setTags] = useLocalStorage<Tag[]>("TAGS", initialTags);
 
   const notesWithTags = useMemo(() => {
     return notes.map((note) => {
