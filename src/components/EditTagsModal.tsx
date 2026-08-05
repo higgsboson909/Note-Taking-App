@@ -30,7 +30,7 @@ export const EditTagsModal = ({
 
         <ScrollArea.Root
           className="relative"
-          scrollbars="vertical"
+          
           style={{ height: 400 }}
         >
           <ScrollArea.Viewport style={{ height: 400 }}>
