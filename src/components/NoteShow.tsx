@@ -15,7 +15,7 @@ export const NoteShow = ({ onDelete }: NoteShowProps) => {
           <div>
             {/* for the col 1 */}
             <h1 className="font-medium text-4xl">{note.title}</h1>
-            <div className="gap-2 pt-3 w-4/6  justify-start items-left flex-wrap">
+            <div className="flex gap-2 pt-3 w-4/6  justify-start -items-left flex-wrap">
               {note.tags.map((tag) => (
                 <span
                   key={tag.id}

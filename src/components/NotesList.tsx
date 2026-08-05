@@ -47,7 +47,7 @@ const NotesList = ({
       <div className="flex flex-col gap-6 border border-white/80  p-5 backdrop-blur-sm sm:p-7 ">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h1 className="mt-2 text-4xl font-semibold uppercase tracking-tight text-slate-900">
+            <h1 className="mt-8 text-4xl font-semibold uppercase tracking-tight text-slate-900">
               Notes
             </h1>
           </div>
